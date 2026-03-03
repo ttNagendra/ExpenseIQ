@@ -2,11 +2,11 @@ import axios from 'axios';
 
 /**
  * Pre-configured Axios instance.
- * - baseURL points to the Vite proxy (/api → http://localhost:5000/api)
- * - Interceptor automatically attaches the JWT token from localStorage
+ * - In production, uses VITE_API_URL (e.g. Render deployment)
+ * - In development, falls back to /api (Vite proxy → localhost:5000)
  */
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: import.meta.env.VITE_API_URL || '/api',
     headers: { 'Content-Type': 'application/json' },
 });
 
