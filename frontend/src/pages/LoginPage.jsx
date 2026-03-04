@@ -110,6 +110,12 @@ const LoginPage = () => {
                         Create one
                     </Link>
                 </p>
+
+                <div className="text-center text-xs mt-3" style={{ color: 'var(--text-tertiary)', lineHeight: '1.6' }}>
+                    <p style={{ fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '4px' }}>Demo Credentials</p>
+                    <p>Email : demodevil@gmail.com</p>
+                    <p>Password : 123456</p>
+                </div>
             </motion.div>
         </div>
     );
